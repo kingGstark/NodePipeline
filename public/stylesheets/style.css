@@ -1,0 +1,61 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #290c10;
+  background: -webkit-linear-gradient(to right, #3e242a, #632b2e, #290c1a);
+  background: linear-gradient(to right, #3e242e, #632b4d, #290c16);
+}
+#hr {
+  height: 3px;
+ 
+  border-top: 1px solid black;
+  background: black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 34px;
+  color: #ffffff;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+h2 {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(16px);
+    transform: translateY(16px);
+  }
+}
+
+
+p
+{
+  text-align: justify;
+}
+
+img
+{
+  width: 286px;
+  height: 381px;
+}
