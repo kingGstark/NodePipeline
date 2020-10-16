@@ -1,17 +1,19 @@
-default:
-  image: ruby:2.5
-  before_script:
-    - apt-get update
-    - apt-get install -y sqlite3 libsqlite3-dev nodejs
-    - ruby -v
-    - which ruby
-    - gem install bundler --no-document
-    - bundle install --jobs $(nproc) "${FLAGS[@]}"
+stages:
+    - build
+    - test
 
-rspec:
-  script:
-    - bundle exec rspec
+build:
+    stage: build
+    script:
+        - echo "Building"
+        - mkdir build
+        - touch build/info.txt
+    artifacts:
+        paths:
+            - build/
 
-rubocop:
-  script:
-    - bundle exec rubocop
+test:
+    stage: test
+    script:
+        - echo "Testing"
+        - test -f "build/info.txt"
